@@ -1,3 +1,5 @@
+#8queen safe 
+
 def is_safe(board, row, col):
     # Check column and diagonals
     for i in range(row):

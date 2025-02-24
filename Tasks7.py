@@ -1,3 +1,5 @@
+#hangman game
+
 import random
 
 # Predefined word list

@@ -1,3 +1,6 @@
+#Develop ai based intelligence agent for the followingconsider four room of abcd and perform cleaning operationusing table driven approach
+
+
 # Define the table with cleaning actions
 cleaning_table = {
     'A': {'dirty': 'clean', 'clean': 'move to B'},

@@ -1,3 +1,6 @@
+#Develop ai based simple reflex agent to perform the cleaning operation as mentioned below initial state abcd all one are dirty and perform updation wheneverroom is clean
+
+
 # Define initial state of rooms (all dirty)
 rooms = {'A': 'dirty', 'B': 'dirty', 'C': 'dirty', 'D': 'dirty'}
 

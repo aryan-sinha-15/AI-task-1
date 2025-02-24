@@ -1,3 +1,5 @@
+#dfs and bfs of given graph
+
 from collections import deque
 
 # Graph representation (Adjacency List)
