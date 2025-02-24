@@ -1,10 +1,24 @@
-def vacuum_cleaner(room):
-    for i in range(2):
-        for j in range(2):
-            if room[i][j] == 1:
-                print(f"Cleaning dirt at ({i}, {j})")
-                room[i][j] = 0  # Clean the dirt
-    print("Room is clean!")
+# Define the table with cleaning actions
+cleaning_table = {
+    'A': {'dirty': 'clean', 'clean': 'move to B'},
+    'B': {'dirty': 'clean', 'clean': 'move to C'},
+    'C': {'dirty': 'clean', 'clean': 'move to D'},
+    'D': {'dirty': 'clean', 'clean': 'done'}
+}
 
-room = [[1, 0], [0, 1]]  # 1 represents dirt, 0 is clean
-vacuum_cleaner(room)
+# Rooms with initial dirt status
+rooms = {'A': 'dirty', 'B': 'dirty', 'C': 'dirty', 'D': 'dirty'}
+
+# Function to clean the rooms based on the table-driven approach
+def table_driven_cleaning():
+    for room in ['A', 'B', 'C', 'D']:
+        action = cleaning_table[room][rooms[room]]
+        print(f"Room {room} is {rooms[room]}. Action: {action}")
+        
+        if action == 'clean':
+            rooms[room] = 'clean'  # Update status after cleaning
+        elif action == 'done':
+            print("All rooms are clean!")
+            break
+
+table_driven_cleaning()
